@@ -19,5 +19,8 @@ RSpec.describe Course do
 
   it 'starts with no students' do
     expect(@course.students).to eq([])
+    expect(@course.full?).to eq(false)
   end
+
+
 end
