@@ -11,7 +11,11 @@ class Course
   end
 
   def full?
-    @full
+    if @students.count >= 2
+      @full = true
+    else
+      false
+    end
   end
 
   def enroll(student)
