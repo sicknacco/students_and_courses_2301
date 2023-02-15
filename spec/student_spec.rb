@@ -9,4 +9,9 @@ RSpec.describe Student do
   it 'exists' do
     expect(@student).to be_instance_of(Student)
   end
+
+  it 'has information' do
+    expect(@student.name).to eq("Morgan")
+    
+  end
 end
