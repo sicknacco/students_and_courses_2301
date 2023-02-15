@@ -13,7 +13,9 @@ RSpec.describe Gradebook do
     expect(@gradebook).to be_instance_of(Gradebook)
     end
 
-    
+    it 'starts with no courses' do
+      expect(@gradebook.courses).to eq([])
+    end
   end
 
 
