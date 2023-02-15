@@ -22,10 +22,15 @@ RSpec.describe Gradebook do
     end
   end
 
-  describe 'Integrating with students' do
+  describe 'Integrating with courses students' do
     before(:each) do
       @course = Course.new("Calculus", 2)
       @student = Student.new({name: "Morgan", age: 21})
+    end
+
+    it 'can add a new course' do
+      @gradebook.add_course("Calculus")
+      expect(@gradebook.courses).to eq(["Calculus"])
     end
   end
 
