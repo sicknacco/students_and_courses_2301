@@ -30,8 +30,6 @@ RSpec.describe Course do
     @course.enroll(student2)
 
     expect(@course.students).to eq([student1, student2])
-
-
+    expect(@course.full?).to eq(true)
   end
-
 end
