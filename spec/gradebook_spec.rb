@@ -32,6 +32,10 @@ RSpec.describe Gradebook do
       @gradebook.add_course("Calculus")
       expect(@gradebook.courses).to eq(["Calculus"])
     end
+
+    it 'can list all students' do
+      expect(@gradebook.list_all_students).to eq(["Morgan"])
+    end
   end
 
 

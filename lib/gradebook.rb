@@ -10,4 +10,10 @@ class Gradebook
   def add_course(course)
     @courses << course
   end
+
+  def list_all_students
+    @courses.find_all do |student|
+      @student
+    end
+  end
 end
