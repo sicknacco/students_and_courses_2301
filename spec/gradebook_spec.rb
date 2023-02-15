@@ -16,9 +16,16 @@ RSpec.describe Gradebook do
     it 'has an instructor' do
       expect(@gradebook.instructor).to eq('Jimmy')
     end
-    
+
     it 'starts with no courses' do
       expect(@gradebook.courses).to eq([])
+    end
+  end
+
+  describe 'Integrating with students' do
+    before(:each) do
+      @course = Course.new("Calculus", 2)
+      @student = Student.new({name: "Morgan", age: 21})
     end
   end
 
